@@ -58,7 +58,43 @@ let inventory = [
     { id: 49, car_make: "Chrysler", car_model: "Sebring", car_year: 1996 },
     { id: 50, car_make: "Lincoln", car_model: "Town Car", car_year: 1999 }
   ];
-  
+
+  let years=["2009","2001","2010","1983","1990","1995", "2009","1987","1996","2000","2004","2004","1997","1999","2000","2001","1987",
+  "1995","1994","1985","2003","1997","1992","2003","2005","2005","2000","2005","1993","2010","1964","1999","2011","1991","2000","2003","1997",
+  "1992","1998","2012","1965","1996","2009","2012","2008","1995","2007","2008","1996","1999"];
+   
+  let Oldcars= [ { id: 4, car_make: "Honda", car_model: "Accord", car_year: 1983 },
+  { id: 5, car_make: "Mitsubishi", car_model: "Galant", car_year: 1990 },
+  { id: 6, car_make: "Honda", car_model: "Accord", car_year: 1995 },
+  { id: 8, car_make: "Audi", car_model: "4000CS Quattro", car_year: 1987 },
+  { id: 9, car_make: "Ford", car_model: "Windstar", car_year: 1996 },
+  { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
+  { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 },
+  { id: 17, car_make: "Buick", car_model: "Skylark", car_year: 1987 },
+  { id: 18, car_make: "Geo", car_model: "Prizm", car_year: 1995 },
+  { id: 19, car_make: "Oldsmobile", car_model: "Bravada", car_year: 1994 },
+  { id: 20, car_make: "Mazda", car_model: "Familia", car_year: 1985 },
+  { id: 22, car_make: "Jeep", car_model: "Wrangler", car_year: 1997 },
+  { id: 23, car_make: "Eagle", car_model: "Talon", car_year: 1992 },
+  { id: 29, car_make: "Mercury", car_model: "Topaz", car_year: 1993 },
+  { id: 31, car_make: "Pontiac", car_model: "GTO", car_year: 1964 },
+  { id: 32, car_make: "Dodge", car_model: "Ram Van 3500", car_year: 1999 },
+  { id: 34, car_make: "Ford", car_model: "Escort", car_year: 1991 },
+  { id: 37, car_make: "Oldsmobile", car_model: "LSS", car_year: 1997 },
+  { id: 38, car_make: "Toyota", car_model: "Camry", car_year: 1992 },
+  { id: 39, car_make: "Ford", car_model: "Econoline E250", car_year: 1998 },
+  { id: 41, car_make: "Ford", car_model: "Mustang", car_year: 1965 },
+  { id: 42, car_make: "GMC", car_model: "Yukon", car_year: 1996 },
+  { id: 46, car_make: "Oldsmobile", car_model: "Ciera", car_year: 1995 },
+  { id: 49, car_make: "Chrysler", car_model: "Sebring", car_year: 1996 },
+  { id: 50, car_make: "Lincoln", car_model: "Town Car", car_year: 1999 }
+  ]
+
+
+  let BMWAndAudi=[{ id: 30, car_make: "BMW", car_model: "6 Series", car_year: 2010 },
+  { id: 25, car_make: "BMW", car_model: "525", car_year: 2005 },
+  { id: 8, car_make: "Audi", car_model: "4000CS Quattro", car_year: 1987 },]
+
   // Example Challenge:
 
   // The dealer wants to know how many "Mazda" cars they have. / Waxay rabaan inay ogaadaan meeqo gaari oo "Mazda" ah ayaa yaalo.
@@ -81,6 +117,7 @@ let inventory = [
 
   // console.log(`Car 33 is a *car year goes here* *car make goes here* *car model goes here*`);
 
+console.log(inventory[32])
 
   
   // ==== Challenge 2 ====
@@ -88,24 +125,28 @@ let inventory = [
 
   // Waxay rabaan inay ogaadaan macluumaadka gaariga ugu dambeeyay. Waxaa ka mid ah inay noocuu yahay (make) iyo modelka gaariga ugu dambeeyay.
 
-  
+  console.log(inventory[49])
   // ==== Challenge 3 ====
   // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
   
   // Dadka qaabilsan xayaysiinta ayaa rabo in gawaarida loo soo bandhigo xarfaha habkey iskugu xigaan (alphabetically) si ay website-ka u galiyaan. Magacyada gawaawida oo dhan isku habee si A-Z ah kadibna console.log ku samee.
-
+console.log(inventory.sort());
 
   // ==== Challenge 4 ====
   // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
   
   // Dadka qaabilsan xisaabinta ayaa rabo inay ogaadaan sanadyada gawaarida oo dhan. Array cusub samee, kadibna ku shub sanadyada gawaarida oo dhan kadibna console.log ku samee.
   
+  console.log(years);
   // ==== Challenge 5 ====
   // The car lot manager needs to find out how many cars are older than the year 2000. Find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
 
   // Qofka maamulo ganacsiga ayaa rabo inuu ogaado inta gaari oo ka horeysay sanadkii 2000. Isticmaal array 'oldCars', kuna shub gawaarida ka horeysay 2000. Kadib console log ku samee.
   
+console.log(Oldcars);
+
   // ==== Challenge 6 ====
   // A buyer is interested in seeing only BMW and Audi cars within the inventory. Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
 
   // Qof rabo inuu gaari gato ayaa rabo inuu ogaado inta BMW iyo Audi yaalo. Array 'BMWAndAudi' la dhaho ku shub dhamaan gawaarida BMW iyo Audi. Kadib adigoo isticmaalaayo JSON.stringify() console.log ku samee.
+console.log(JSON.stringify(BMWAndAudi))

@@ -3,12 +3,11 @@
 // Take the commented ES5 syntax and convert it to ES6 arrow Syntax
 
 
-/*
 
+invoke
 ------------
-function myFunction() {
+function myFunction()
 console.log("Function was invoked!");
-};
 
 myFunction();
 ----------------
@@ -27,7 +26,7 @@ let add = function (param1, param2) {
 
 add(1,2);
 
-*/
+
 
 
 
@@ -51,4 +50,12 @@ Use the game function below to do the following:
 
 function game(user, computer){
     /*add your code here*/
+    if (user === scissors && computer === paper){
+      console.log("you win!");
+    }
+    if (user===rock && computer===paper){ console.log
+    ("you lose!")}
+    else(user===paper && computer===paper) {
+      console.log("it's a tie")
+    }
 }
